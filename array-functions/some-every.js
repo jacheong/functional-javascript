@@ -1,10 +1,18 @@
+//_.some() returns true if at least one value returns true. _.every() value retuns true
+
 var _ = require('lodash');
 
-var numbers = [1, 2, 3, 4, 5 ];
-var evenNumbers = [];
+var numbers = [ 3, 8, 4, 12, 20 ];
+var someValues;
+var everyValue;
 
-evenNumbers = _.filter(numbers, function(element) {
+someValues = _.some(numbers, function(element) {
     return element % 2 === 0;
 });
 
-console.log(evenNumbers);
+everyValue = _.every(numbers, function(element) {
+    return element % 2 === 0;
+}); 
+
+console.log(someValues);
+console.log(everyValue);
